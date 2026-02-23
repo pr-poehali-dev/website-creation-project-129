@@ -5,7 +5,7 @@ import { campers } from "@/data/campers";
 import { routes } from "@/data/routes";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
-const HERO_IMG = "https://cdn.poehali.dev/projects/03910495-d18f-464a-8ba2-70c8fd29d640/files/9620052b-8f5c-40bc-85fd-4f20f078193d.jpg";
+const HERO_IMG = "https://cdn.poehali.dev/projects/03910495-d18f-464a-8ba2-70c8fd29d640/files/b80f2ba8-9c75-4484-8100-fcdbd22d0ed4.jpg";
 
 const advantages = [
   { icon: "ShieldCheck", title: "Полная приватность", desc: "Только вы и природа. Никаких соседей и чужого шума." },
@@ -20,15 +20,15 @@ const formats = [
   { emoji: "📸", title: "Фотосессия", desc: "Уникальные локации и реквизит" },
   { emoji: "✨", title: "Глэмпинг", desc: "Люкс-комфорт на природе" },
   { emoji: "👨‍👩‍👧‍👦", title: "Семейный отдых", desc: "Впечатления для всей семьи" },
-  { emoji: "🎣", title: "Рыбалка", desc: "Утром на берегу, вечером у кемпера" },
+  { emoji: "🎣", title: "Рыбалка", desc: "Утром на берегу, вечером у прицепа" },
   { emoji: "💼", title: "Переговорная", desc: "Нестандартная деловая встреча" },
 ];
 
 const steps = [
-  { num: "01", title: "Выберите кемпер и дату", desc: "Смотрите свободные даты и выбирайте подходящий формат." },
+  { num: "01", title: "Выберите прицеп и дату", desc: "Смотрите свободные даты и выбирайте подходящий прицеп." },
   { num: "02", title: "Оставьте заявку", desc: "Напишите в Telegram или заполните форму — ответим за 15 минут." },
   { num: "03", title: "Подпишите договор", desc: "Дистанционно или при встрече. Оплата безопасной транзакцией." },
-  { num: "04", title: "Забирайте кемпер", desc: "Показываем всё устройство и выдаём маршрут. Счастливого пути!" },
+  { num: "04", title: "Цепляйте прицеп и в путь!", desc: "Показываем устройство, выдаём маршрут. Счастливого пути!" },
 ];
 
 const testimonials = [
@@ -96,7 +96,7 @@ export default function Index() {
 
           <p className="text-lg md:text-xl font-light max-w-2xl mx-auto mb-10 animate-fade-in"
             style={{animationDelay:'0.2s', color:'rgba(240,232,208,0.75)'}}>
-            Путешествуй по России в комфортном кемпере. Готовые маршруты, полное оснащение — привози только себя.
+            Арендуй прицеп-кемпер и путешествуй на своём авто. Готовые маршруты, полное оснащение — привози только себя.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in"
@@ -113,7 +113,7 @@ export default function Index() {
           </div>
 
           <div className="flex items-center justify-center gap-8 mt-16 animate-fade-in" style={{animationDelay:'0.5s'}}>
-            {[["3", "кемпера"], ["150+", "маршрутов"], ["500+", "гостей"]].map(([val, label]) => (
+            {[["3", "прицепа"], ["150+", "маршрутов"], ["500+", "гостей"]].map(([val, label]) => (
               <div key={label} className="text-center">
                 <div className="font-cormorant text-3xl md:text-4xl font-semibold" style={{color:'var(--color-gold-light)'}}>{val}</div>
                 <div className="text-xs uppercase tracking-widest mt-1" style={{color:'var(--color-text-muted)'}}>{label}</div>
@@ -134,7 +134,7 @@ export default function Index() {
             <div className="gold-line mx-auto mb-4" />
             <h2 className="section-title text-4xl md:text-5xl mb-4">Почему выбирают нас</h2>
             <p className="max-w-xl mx-auto" style={{color:'var(--color-text-muted)'}}>
-              Мы не просто сдаём кемпер — мы создаём готовый сценарий для вашего отдыха
+              Мы не просто сдаём прицеп — мы создаём готовый сценарий для вашего отдыха
             </p>
           </div>
 
@@ -161,11 +161,11 @@ export default function Index() {
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-14 animate-on-scroll">
             <div>
               <div className="gold-line mb-4" />
-              <h2 className="section-title text-4xl md:text-5xl mb-2">Наши кемперы</h2>
+              <h2 className="section-title text-4xl md:text-5xl mb-2">Наши прицепы</h2>
               <p style={{color:'var(--color-text-muted)'}}>Каждый — отдельная история</p>
             </div>
             <Link to="/campers" className="btn-outline-gold mt-6 md:mt-0 self-start md:self-auto">
-              Все кемперы <Icon name="ArrowRight" size={16} />
+              Все прицепы <Icon name="ArrowRight" size={16} />
             </Link>
           </div>
 

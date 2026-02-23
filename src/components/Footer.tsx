@@ -16,7 +16,7 @@ export default function Footer() {
               </span>
             </div>
             <p className="text-sm leading-relaxed mb-6 max-w-xs" style={{color:'var(--color-text-muted)'}}>
-              Аренда кемперов и готовые маршруты по России. Путешествуй с комфортом, открывай новое.
+              Аренда прицепов-кемперов и готовые маршруты по России. Путешествуй на своём авто — мы обеспечим комфорт.
             </p>
             <div className="flex items-center gap-3">
               <a href="https://t.me/rusfantazia" target="_blank" rel="noopener noreferrer"

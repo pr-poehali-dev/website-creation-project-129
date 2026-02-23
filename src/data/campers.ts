@@ -7,48 +7,56 @@ export interface Camper {
   priceUnit: string;
   capacity: number;
   length: number;
+  weight: number;
   features: string[];
   equipment: string[];
   badge?: string;
+  hookType: string;
 }
 
 export const campers: Camper[] = [
   {
-    id: "lux-1",
+    id: "tr-1",
     name: "«Таёжный»",
-    subtitle: "Полноразмерный кемпер для глэмпинга",
-    image: "https://cdn.poehali.dev/projects/03910495-d18f-464a-8ba2-70c8fd29d640/files/9620052b-8f5c-40bc-85fd-4f20f078193d.jpg",
-    price: 7500,
+    subtitle: "Прицеп-дача для комфортного глэмпинга",
+    image: "https://cdn.poehali.dev/projects/03910495-d18f-464a-8ba2-70c8fd29d640/files/b80f2ba8-9c75-4484-8100-fcdbd22d0ed4.jpg",
+    price: 4500,
     priceUnit: "сутки",
     capacity: 4,
-    length: 7.5,
+    length: 6.5,
+    weight: 1350,
     badge: "Популярный",
-    features: ["Двуспальная кровать", "Кухня с плитой", "Душ и туалет", "Отопление", "Кондиционер"],
-    equipment: ["Постельное бельё", "Полотенца", "Посуда", "Мангал", "Столик и стулья", "Wi-Fi роутер"],
+    hookType: "Фаркоп 50 мм (тип B)",
+    features: ["Двуспальная кровать", "Газовая кухня", "Душ и туалет", "Газовое отопление", "Тент-маркиза"],
+    equipment: ["Постельное бельё", "Полотенца", "Посуда и приборы", "Мангал", "Складной столик и стулья", "Газовый баллон"],
   },
   {
-    id: "lux-2",
+    id: "tr-2",
     name: "«Северный»",
-    subtitle: "Панорамный кемпер с большими окнами",
-    image: "https://cdn.poehali.dev/projects/03910495-d18f-464a-8ba2-70c8fd29d640/files/526d3e96-b6ea-4c53-8e8c-3fba4facba9c.jpg",
-    price: 9800,
+    subtitle: "Компактный прицеп с панорамными окнами",
+    image: "https://cdn.poehali.dev/projects/03910495-d18f-464a-8ba2-70c8fd29d640/files/721cb57c-1b4e-4ea3-94d4-8bff60e8f952.jpg",
+    price: 5800,
     priceUnit: "сутки",
     capacity: 2,
-    length: 6.8,
+    length: 5.8,
+    weight: 980,
     badge: "Премиум",
-    features: ["Панорамные окна", "Люкс-кровать king size", "Мини-кухня", "Душ с баком 40л", "Смарт ТВ"],
-    equipment: ["Дизайнерский текстиль", "Bluetooth-колонка", "Посуда", "Набор барбекю", "Шторы блэкаут"],
+    hookType: "Фаркоп 50 мм (тип B)",
+    features: ["Панорамные окна", "Кровать king size", "Мини-кухня", "Душ с баком 60 л", "Смарт ТВ 32\""],
+    equipment: ["Дизайнерский текстиль", "Bluetooth-колонка", "Посуда", "Набор для барбекю", "Шторы блэкаут"],
   },
   {
-    id: "lux-3",
+    id: "tr-3",
     name: "«Семейный»",
-    subtitle: "Просторный кемпер для семьи с детьми",
-    image: "https://cdn.poehali.dev/projects/03910495-d18f-464a-8ba2-70c8fd29d640/files/357972a6-7936-4dfb-83d3-f9987f4fc134.jpg",
-    price: 8500,
+    subtitle: "Большой прицеп для семьи с детьми",
+    image: "https://cdn.poehali.dev/projects/03910495-d18f-464a-8ba2-70c8fd29d640/files/2ebbaa6c-5fad-49c9-b9e7-538f835a2075.jpg",
+    price: 5200,
     priceUnit: "сутки",
     capacity: 6,
-    length: 8.2,
-    features: ["3 спальных места", "Детские принадлежности", "Просторная кухня", "ТВ для детей", "Двойной холодильник"],
-    equipment: ["Детское постельное", "Настольные игры", "Удочки в аренду", "Велосипеды", "Аптечка"],
+    length: 7.8,
+    weight: 1600,
+    hookType: "Фаркоп 50 мм (тип B)",
+    features: ["3 спальных места", "Просторная кухня", "Отдельный детский уголок", "ТВ", "Двойной холодильник"],
+    equipment: ["Детское постельное", "Настольные игры", "Удочки в аренду", "Аптечка", "Газовый баллон"],
   },
 ];

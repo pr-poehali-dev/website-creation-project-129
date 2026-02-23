@@ -1,20 +1,27 @@
-import { useState } from "react";
 import Icon from "@/components/ui/icon";
 import { campers } from "@/data/campers";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 export default function Campers() {
   useScrollAnimation();
-  const [active, setActive] = useState<string | null>(null);
 
   return (
     <div className="pt-28 pb-24">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 animate-on-scroll">
           <div className="gold-line mx-auto mb-4" />
-          <h1 className="section-title text-5xl md:text-6xl mb-4">Наши кемперы</h1>
+          <h1 className="section-title text-5xl md:text-6xl mb-4">Наши прицепы</h1>
           <p className="max-w-xl mx-auto" style={{color:'var(--color-text-muted)'}}>
-            Каждый кемпер — продуманное пространство для вашего идеального путешествия
+            Каждый прицеп-кемпер — комфортное пространство, которое едет за вашим автомобилем
+          </p>
+        </div>
+
+        <div className="rounded-xl p-5 mb-10 flex items-start gap-4 animate-on-scroll"
+          style={{background:'var(--color-gold-soft)', border:'1px solid rgba(200,146,15,0.3)'}}>
+          <Icon name="Info" size={18} style={{color:'var(--color-gold-light)', flexShrink:0, marginTop:'2px'} as React.CSSProperties} />
+          <p className="text-sm leading-relaxed" style={{color:'var(--color-gold-light)'}}>
+            Прицепы подключаются к вашему автомобилю через стандартный фаркоп 50 мм (тип B).
+            Для буксировки нужна категория <strong>BE</strong> или отметка в правах. Уточните заранее — мы поможем разобраться.
           </p>
         </div>
 
@@ -40,9 +47,14 @@ export default function Campers() {
                     <h2 className="font-cormorant text-3xl font-semibold mb-1" style={{color:'var(--color-text)'}}>{c.name}</h2>
                     <p className="mb-5" style={{color:'var(--color-text-muted)'}}>{c.subtitle}</p>
 
-                    <div className="flex items-center gap-6 mb-6 text-sm" style={{color:'var(--color-text-muted)'}}>
-                      <span className="flex items-center gap-1.5"><Icon name="Users" size={15} />{c.capacity} человека</span>
-                      <span className="flex items-center gap-1.5"><Icon name="Ruler" size={15} />{c.length} метров</span>
+                    <div className="flex flex-wrap items-center gap-4 mb-6 text-sm" style={{color:'var(--color-text-muted)'}}>
+                      <span className="flex items-center gap-1.5"><Icon name="Users" size={15} />{c.capacity} чел.</span>
+                      <span className="flex items-center gap-1.5"><Icon name="Ruler" size={15} />{c.length} м</span>
+                      <span className="flex items-center gap-1.5"><Icon name="Weight" size={15} fallback="Gauge" />{c.weight} кг</span>
+                      <span className="flex items-center gap-1.5 text-xs px-2 py-0.5 rounded"
+                        style={{background:'var(--color-navy)', border:'1px solid var(--color-navy-border)'}}>
+                        <Icon name="Link" size={12} />{c.hookType}
+                      </span>
                     </div>
 
                     <div className="mb-5">
